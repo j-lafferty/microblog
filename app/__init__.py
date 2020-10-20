@@ -8,6 +8,6 @@ app = Flask(__name__)
 app.config.from_object(Config)
 db = SQLAlchemy(app)
 migrate = Migrate(app, db)
-lgin = LoginManager(app)
+login = LoginManager(app)
 
 from app import routes, models
