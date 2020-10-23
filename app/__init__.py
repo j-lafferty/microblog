@@ -20,8 +20,8 @@ from app import routes, models, errors
 
 # if FLASK_DEBUG=0
 if not app.debug:
-	
-	# send error to email
+
+    # send error to email
     if app.config['MAIL_SERVER']:
         auth = None
         if app.config['MAIL_USERNAME'] or app.config['MAIL_PASSWORD']:
@@ -38,14 +38,14 @@ if not app.debug:
         app.logger.addHandler(mail_handler)
 
     # send error to log file
-	if not os.path.exists('logs'):
-		os.mkdir('logs')
-	file_handler = RotatingFileHandler('logs/microblog.log', maxBytes=10240,
-									   backupCount=10)
-	file_handler.setFormatter(logging.Formatter(
-		'%(asctime)s %(levelname)s: %(message)s [in %(pathname)s:%(lineno)d]'))
-	file_handler.setLevel(logging.INFO)
-	app.logger.addHandler(file_handler)
+    if not os.path.exists('logs'):
+        os.mkdir('logs')
+    file_handler = RotatingFileHandler('logs/microblog.log', maxBytes=10240,
+                                       backupCount=10)
+    file_handler.setFormatter(logging.Formatter(
+        '%(asctime)s %(levelname)s: %(message)s [in %(pathname)s:%(lineno)d]'))
+    file_handler.setLevel(logging.INFO)
+    app.logger.addHandler(file_handler)
 
-	app.logger.setLevel(logging.INFO)
-	app.logger.info('Microblog startup')
+    app.logger.setLevel(logging.INFO)
+    app.logger.info('Microblog startup')

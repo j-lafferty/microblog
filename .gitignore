@@ -1,5 +1,6 @@
 .DS_Store
 venv
+logs
 
 # Packages
 __pycache__
