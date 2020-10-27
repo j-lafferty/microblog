@@ -13,7 +13,7 @@ class UserModelCase(unittest.TestCase):
         db.drop_all()
 
     def test_password_hashing(self):
-        u = Userr(username='susan')
+        u = User(username='susan')
         u.set_password('cat')
         self.assertFalse(u.check_password('dog'))
         self.assertTrue(u.check_password('cat'))
@@ -30,7 +30,7 @@ class UserModelCase(unittest.TestCase):
         db.session.add(u1)
         db.session.add(u2)
         db.session.commit()
-        self.assertEqual(u1.folloed.all(), [])
+        self.assertEqual(u1.followed.all(), [])
         self.assertEqual(u1.followers.all(), [])
 
         u1.follow(u2)
