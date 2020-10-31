@@ -50,7 +50,7 @@ class PostForm(FlaskForm):
 		DataRequired(), Length(min=1, max=140)])
 	submit = SubmitField('Submit')
 
-class RestPasswordRequestForm(FlaskForm):
+class ResetPasswordRequestForm(FlaskForm):
 	email = StringField('Email', validators=[DataRequired(), Email()])
 	submit = SubmitField('Request Password Rest')
 
