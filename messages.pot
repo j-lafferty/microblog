@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2020-11-12 14:54-0800\n"
+"POT-Creation-Date: 2020-11-12 15:12-0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,6 +16,10 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.8.0\n"
+
+#: app/__init__.py:21
+msgid "Please log in to access this page."
+msgstr ""
 
 #: app/email.py:19
 msgid "[Microblog] Reset You Password"
@@ -70,7 +74,7 @@ msgid "Say something"
 msgstr ""
 
 #: app/forms.py:56
-msgid "Request Password Rest"
+msgid "Request Password Reset"
 msgstr ""
 
 #: app/forms.py:62
