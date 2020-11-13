@@ -7,7 +7,7 @@ def translate(text, source_language, dest_language):
     if 'MS_TRANSLTOR_KEY' not in app.config or \
             not app.config['MS_TRANSLTOR_KEY']:
         return _('Error: the translation service is not configured.')
-    auth = {'OCP-Apim-Subscription-Key': app.config['MS_TRANSLTOR_KEY']}
+    auth = {'Ocp-Apim-Subscription-Key': app.config['MS_TRANSLTOR_KEY']}
     r = requests.get('https://api.microsofttranslator.com/v2/Ajax.svc'
                      '/Translate?text={}&from={}&to={}'.format(
                         text, source_language, dest_language),
