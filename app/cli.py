@@ -22,7 +22,7 @@ def compile():
     if os.system('pybable compile -d app/translations'):
         raise RunTimeError('compile command failed')
 
-@tranlsate.command()
+@translate.command()
 @click.argument('lang')
 def init(lang):
     """Initialize a new language."""
